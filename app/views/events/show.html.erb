@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <h1 class="display-4">Event: <%= @event.title %></h1>
+  <p class="display-6">Host by: <%= @event.user.username %></p>
+  <p class="lead"><%= @event.description %></p>
+  <hr class="my-4">
+  <p><%= @event.date %></p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Confirm</a>
+</div>

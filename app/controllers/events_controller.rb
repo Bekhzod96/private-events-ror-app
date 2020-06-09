@@ -11,14 +11,14 @@ class EventsController < ApplicationController
 
 		if event.save 
 			flash[:notice] = "Event created successfully!"
-			redirect_to event_path(current_user)
+			redirect_to event_path(event)
 		else
 			render 'new'
 		end
 	end
 
 	def show
-		
+	  @event = Event.find_by(id: params[:id])
 	end
 
 	protected
