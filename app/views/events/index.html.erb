@@ -1,14 +1,17 @@
 
 <div class="jumbotron">
-  <h1 class="display-4">Welcome, <%= @user.username %>!</h1>
+  <h1 class="display-4">Upcoming Events </h1>
 </div>
 <div class="row">
-  <% @user.events.each do |event| %>
+  <% @events.each do |event| %>
    <div class="card col-4">
     <img src="https://ideas.staticsfly.com/ideas/wp-content/uploads/2016/08/50-happy-birthday-quotes-thumb.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title"><%= event.title %></h5>
-      <p class="card-text"><%= event.description %></p>
+      <p class="card-text">
+				<p><%= event.description %></p>
+				<em><%= event.date %></em>
+			</p>
       <a href="#" class="btn btn-primary">Confirm</a>
     </div>
   </div>
