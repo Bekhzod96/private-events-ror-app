@@ -13,6 +13,7 @@ class EventsController < ApplicationController
 			flash[:notice] = "Event created successfully!"
 			redirect_to event_path(event)
 		else
+			flash[:notice] = "Event didn't created!"
 			render 'new'
 		end
 	end
