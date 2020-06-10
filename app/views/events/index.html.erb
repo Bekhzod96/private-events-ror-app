@@ -4,7 +4,8 @@
 </div>
 <div class="row">
   <% @events.each do |event| %>
-   <div class="card col-3 m-3">
+  <div class="col-4">
+   <div class="card my-3">
     <img src="https://ideas.staticsfly.com/ideas/wp-content/uploads/2016/08/50-happy-birthday-quotes-thumb.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title"><%= event.title %></h5>
@@ -15,5 +16,6 @@
       <a href="#" class="btn btn-primary">Confirm</a>
     </div>
   </div>
+</div>
   <% end %>
 </div>

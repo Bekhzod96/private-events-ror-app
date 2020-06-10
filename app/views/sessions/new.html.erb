@@ -1,13 +1,20 @@
 
-<h1>Sign In</h1>
+<div class="jumbotron">
+	<h1 class="display-4">Sign in </h1>
+</div>
 
-<%= form_for :session, url: login_path do |form| %>
-  <p>
-    <%= form.label :username %><br>
-    <%= form.text_field :username %>
-  </p>
 
-  <p>
-    <%= form.submit %>
-  </p>
+<%= form_for(:session, url: login_path, role: "form") do |f| %>
+    <div class="form-group row ">
+      <div class="col-sm-2"></div>
+    <div class="control-label col-sm-2">
+      <%= f.label :Username %>
+    </div>
+    <div class="col-sm-5">
+      <%= f.text_field :username, class: "form-control", placeholder: "Enter Username", autofocus: true %>
+    </div>
+    <div class="col-xs-3 ml-3">
+      <%= f.submit "Sign in", class: 'btn btn-primary btn-lg' %>
+    </div>
+  </div>
 <% end %>

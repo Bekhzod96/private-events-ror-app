@@ -13,10 +13,16 @@
 
   <body>
     <%= render 'layouts/nav' %>
-    <div class="container">
-      <% if  flash[:notice] %>
-      <p ><%= flash[:notice] %></p>
-      <% end %>
+    <div class="container-lg">
+      <div class="col-8 offset-2">
+        <% flash.each do |name, msg| %>
+        <div class='alert alert-<%= "#{name}"%>'>
+          <a href="#" class="close" data-dismiss="alert"></a>
+          <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+        </div>
+        <%end%>
+      </div>
+    
       <%= yield %>
     </div>
   </body>
