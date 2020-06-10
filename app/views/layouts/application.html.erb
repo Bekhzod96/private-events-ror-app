@@ -13,7 +13,7 @@
 
   <body>
     <%= render 'layouts/nav' %>
-    <div class="container-lg">
+    <div class="container-fluid">
       <div class="col-8 offset-2">
         <% flash.each do |name, msg| %>
         <div class='alert alert-<%= "#{name}"%>'>
@@ -22,7 +22,7 @@
         </div>
         <%end%>
       </div>
-    
+
       <%= yield %>
     </div>
   </body>

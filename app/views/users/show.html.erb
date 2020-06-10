@@ -16,3 +16,20 @@
   </div>
   <% end %>
 </div>
+
+<h3>The events that you will assist:</h3>
+
+<div class="row">
+  <% @user.attended_events.each do |event| %>
+  <div class="col-4">
+    <div class="card my-3">
+    <img src="https://ideas.staticsfly.com/ideas/wp-content/uploads/2016/08/50-happy-birthday-quotes-thumb.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= event.title %></h5>
+      <p class="card-text"><%= event.description %></p>
+      <a href="#" class="btn btn-primary">Confirm</a>
+    </div>
+  </div>
+  </div>
+  <% end %>
+</div>

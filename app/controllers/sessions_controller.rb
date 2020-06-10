@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 		# User.find_by(username: Bekhzod)
 		if user
 			session[:user_id] = user.id
-			flash[:seccess] = "You have successfully logged in"
+			flash[:success] = "You have successfully logged in"
 			redirect_to user_path(user)	
 		else
 			flash.now[:danger] = "Such a User does not exist. Please sign up!"
