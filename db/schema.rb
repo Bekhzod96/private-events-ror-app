@@ -10,26 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_09_220505) do
+ActiveRecord::Schema.define(version: 2020_06_10_170753) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "date"
     t.string "datetime"
-    t.integer "creator", null: false
+    t.integer "creator_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator"], name: "index_events_on_creator"
+    t.index ["creator_id"], name: "index_events_on_creator_id"
   end
 
   create_table "user_attendees", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "event_id", null: false
+    t.integer "attendee_id", null: false
+    t.integer "attended_event_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["event_id"], name: "index_user_attendees_on_event_id"
-    t.index ["user_id"], name: "index_user_attendees_on_user_id"
+    t.index ["attended_event_id"], name: "index_user_attendees_on_attended_event_id"
+    t.index ["attendee_id"], name: "index_user_attendees_on_attendee_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_06_09_220505) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "events", "users", column: "creator"
-  add_foreign_key "user_attendees", "events"
-  add_foreign_key "user_attendees", "users"
+  add_foreign_key "events", "users", column: "creator_id"
+  add_foreign_key "user_attendees", "events", column: "attended_event_id"
+  add_foreign_key "user_attendees", "users", column: "attendee_id"
 end
