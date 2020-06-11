@@ -18,21 +18,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @upcoming_events = upcoming_events(@user)
-    @prev_events = previous_events(@user)
   end
 
   protected
 
   def params_user
     params.require(:user).permit(:username)
-  end
-
-  def upcoming_events(user)
-    @
-  end
-
-  def previous_events(user)
   end
 
 end
