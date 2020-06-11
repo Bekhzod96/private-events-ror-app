@@ -2,7 +2,7 @@
 
 **Members - Only**
 
-We built a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations. Events take place at a specific date and location..
+We built a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations. Events take place at a specific date and location.
 
 
 >Using ruby on rails and bootstrap framework and classes we set up the web app in such a way that users can navigate comfortably for a signup, login logout, and create their events.
