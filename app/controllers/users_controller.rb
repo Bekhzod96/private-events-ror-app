@@ -18,8 +18,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @upcoming_events = @user.upcoming_events
-    @previous_events = @user.previous_events
   end
 
   protected
