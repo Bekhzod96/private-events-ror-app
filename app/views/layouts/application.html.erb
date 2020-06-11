@@ -8,14 +8,22 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+
   </head>
 
   <body>
     <%= render 'layouts/nav' %>
-    <% if  flash[:notice] %>
-    <p ><%= flash[:notice] %></p>
-    <% end %>
-    <%= yield %>
+    <div class="container">
+      <div class="col-8 offset-2">
+        <% flash.each do |name, msg| %>
+        <div class='alert alert-<%= "#{name}"%>'>
+          <a href="#" class="close" data-dismiss="alert"></a>
+          <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+        </div>
+        <%end%>
+      </div>
+
+      <%= yield %>
+    </div>
   </body>
 </html>

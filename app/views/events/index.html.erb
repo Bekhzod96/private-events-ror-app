@@ -1,0 +1,20 @@
+
+<div class="jumbotron">
+  <h1 class="display-4">Upcoming Events </h1>
+
+<div class="row">
+  <% @events.future.each do |event| %>
+  <%= render 'events/layout', event: event %>
+  <% end %>
+</div>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Past Events </h1>
+
+
+<div class="row">
+  <% @events.past.each do |event| %>
+  <%= render 'events/layout', event: event %>
+  <% end %>
+</div>
+</div>

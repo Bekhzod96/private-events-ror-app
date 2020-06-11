@@ -1,0 +1,16 @@
+<div class="card container p-3 my-3 bg-light" >
+<h3 class="text-info">Feature</h3>
+<div class="row">
+  <% @user.events.future.each do |event| %>
+  <%= render 'events/layout', event: event %>
+  <% end %>
+</div>
+</div>
+<div class="card container p-3 my-3 bg-light">
+<h3 class="text-info" >Past</h3>
+<div class="row">
+  <% @user.events.past.each do |event| %>
+  <%= render 'events/layout', event: event %>
+  <% end %>
+</div>
+</div>

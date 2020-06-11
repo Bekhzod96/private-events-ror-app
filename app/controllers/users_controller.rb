@@ -1,16 +1,15 @@
 class UsersController < ApplicationController
-  def new
-  
-  end
+  def new; end
 
   def create
     @user = User.new(params_user)
 
     if @user.save
-      flash[:notice] = "You have successfully signed up!"
+      flash[:success] = 'You have successfully signed up!'
       session[:user_id] = @user.id
       redirect_to user_path(@user.id)
     else
+      flash[:danger] = 'You have successfully signed up!'
       render 'new'
     end
   end
@@ -24,5 +23,4 @@ class UsersController < ApplicationController
   def params_user
     params.require(:user).permit(:username)
   end
-
 end
