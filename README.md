@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project we build some forms, using pure HTML and then using the helper methods that Rails provides.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Rails 6.0.3
 
-* System dependencies
+## Getting start
 
-* Configuration
+In order to start with the project:
 
-* Database creation
+1. You need to have Rails environment installed. [Click here for instructions](https://guides.rubyonrails.org/getting_started.html)
+2. Clone [this repository :blue_book:](https://github.com/javierbotero/BareMetalFormsAndHelpers.git)
+3. Run the rails server
+    - rails server
 
-* Database initialization
+## Authors
 
-* How to run the test suite
+👤 **Bekhzod Akhrorov**
 
-* Services (job queues, cache servers, search engines, etc.)
+- Github:[@Bekhzod96](https://github.com/Bekhzod96)
+- Twitter: [ @Begzod](https://twitter.com/25d47e8987f740b)
+- Linkedin:[@Bekhzod AKhrorov](https://www.linkedin.com/in/bekhzod-akhrorov/)
 
-* Deployment instructions
 
-* ...
+👤 **Javier Botero**
+
+- Github: [@Javierbotero](https://github.com/javierbotero)
+- Twitter: [@@Javierbotero1](https://twitter.com/JavierBotero1)
+- Linkedin: [Javierbotero](https://www.linkedin.com/in/javier-botero-044686155/)
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
