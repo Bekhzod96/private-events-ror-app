@@ -6,17 +6,22 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="/">Event Manage</a>
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+    <% unless logged_in? %>
       <li class="nav-item btn">
         <%= link_to 'Sign up', new_user_path %>
       </li>
       <li class="nav-item btn">
         <%= link_to 'Sign in', login_path %>
       </li>
+    <% else %>
       <li class="nav-item btn">
         <%= link_to 'Sign out', logout_path, method: :delete %>
       </li>
+      <li class="nav-item btn">
+        <%= link_to 'Create a New Event', new_event_path %>
+      </li> 
+    <% end %>
 		</ul>
-    <%= link_to 'Create a New Event', new_event_path %>
 		<!-- Search form -->
     <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

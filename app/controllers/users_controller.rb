@@ -28,11 +28,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username)
   end
 
-  def upcoming_events(user)
-    @
-  end
-
-  def previous_events(user)
-  end
-
 end
